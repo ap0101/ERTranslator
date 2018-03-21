@@ -8,7 +8,7 @@ namespace ERTranslator
     {
         public void DBInsert(string originaltext, string translatedtext)
         {
-            using (SqlConnection cn = new SqlConnection("data source=1-ПК;initial catalog=Translator;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+            using (SqlConnection cn = new SqlConnection(Properties.Settings.Default.ConnectionString))
             {
                 SqlCommand cmdInsert = new SqlCommand();
                 try

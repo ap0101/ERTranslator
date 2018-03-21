@@ -26,5 +26,15 @@ namespace ERTranslator.Properties
                 return defaultInstance;
             }
         }
+
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("data source=1-ПК;initial catalog=Translator;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")]
+        public string ConnectionString
+        {
+            get
+            {
+                return (string)(this["ConnectionString"]);
+            }
+        }
     }
 }
